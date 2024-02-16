@@ -29,7 +29,6 @@ class TX(object):
         while not self.threadStop:
             if(self.threadMutex):
                 self.transLen    = self.fisica.write(self.buffer)
-                time.sleep(0.1)
                 self.threadMutex = False
 
     def threadStart(self):
